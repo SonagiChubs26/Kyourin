@@ -8,24 +8,28 @@
             <div class="form-box">
                 <div class="button-box">
                     <div id="btn"></div>
-                    <button type="button" class="toggle-btn" onclick="login()"> Log In </button>
+                    <button type="button" class="toggle-btn" onclick="login()"> Login </button>
                     <button type="button" class="toggle-btn" onclick="register()"> Register </button>
                 </div>
 
-                <form id="login" class="input-group">
-                    <input type="text" class="input-field" placeholder="User Id" required>
-                    <input type="text" class="input-field" placeholder="Enter Password" required>
-                    <input type="checkbox" class="check-box"><span> Remember Password</span>
-                    <button type="submit" class="submit-btn"> Log In </button>
+                <form id="login" class="input-group" method="post" action="login.php">
+                    <input type="text" class="input-field" placeholder="Enter Username" name="username" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" name="password" required>                    
+                    <a href="#" class="check-box">Forgot Password</a>
+                    <button type="submit" class="submit-btn"> Login </button>
+
+                    
                 </form>
 
-                <form id="register" class="input-group">
-                    <input type="text" class="input-field" placeholder="User Id" required>
-                    <input type="email" class="input-field" placeholder="Email Id" required>
-                    <input type="text" class="input-field" placeholder="Enter Password" required>
-                    <input type="checkbox" class="check-box"><span> I agree to the terms & condistions</span>
+                <form id="register" class="input-group" method="post" action="signup.php">
+                    <input type="text" class="input-field" placeholder="Enter First Name" name="firstName" required>
+                    <input type="text" class="input-field" placeholder="Enter Last Name" name="lastName" required>
+                    <input type="text" class="input-field" placeholder="Enter Username" name="username" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" name="password" required>                    
                     <button type="submit" class="submit-btn"> Register </button>
                 </form>
+                
+                
             </div>
         </div>
 
